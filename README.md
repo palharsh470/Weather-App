@@ -1,8 +1,40 @@
-# Welcome to your Expo app 👋
+# 🌦️ Weather Forecast App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A cross-platform mobile app built with React Native, JavaScript, Expo, and the OpenWeatherMap API that provides real-time weather updates and a 5-day forecast based on user location or any selected place on the map.
 
-## Get started
+
+
+---
+
+## 🚀 Features
+
+- 📍 Real-time weather updates based on current device location
+- 📆 5-day weather forecast with clean, scrollable UI
+- 🌡️ Detailed weather data: temperature, humidity, pressure, and wind speed
+- 🗺️ Interactive map – tap to select any location and get full weather details, including forecast
+- 🔄 Dynamic refresh and automatic location detection
+- 📱 Smooth and responsive design for Android and iOS devices
+
+---
+
+## 📸 Screenshots
+
+| Home Screen | Forecast | Map Selection | Selected Location Weather |
+|------------|-------------|----------------|----------------|
+| ![Login](assets/images/home.jpg) | ![Home](assets/images/forecast.jpg) | ![Search](assets/images/map.jpg) | ![Details](assets/images/selected.jpg) |
+
+---
+
+## 🎥 Demo Video
+
+<a href="https://www.instagram.com/reel/DM_EBd7B4bb">
+  <img src="assets/images/videologo.jpg" alt="Watch Demo" width="200"/>
+</a>
+
+
+---
+
+## 🔧 Get started
 
 1. Install dependencies
 

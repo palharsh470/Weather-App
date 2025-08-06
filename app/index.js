@@ -7,6 +7,8 @@ import MapView, { Marker } from "react-native-maps";
 import Cards from "../components/maincards";
 import Forecast from "../components/mainforecast";
 
+const api_key="c51ef01a79ab2a387101f4ea220bc65a";
+
 export default function HomePage() {
 
     useEffect(function(){
@@ -33,7 +35,7 @@ export default function HomePage() {
 
     function confirmlocation() {
         setmap(!map)
-        const weatherurl = `https://api.openweathermap.org/data/2.5/weather?lat=${markerlocation?.latitude}&lon=${markerlocation?.longitude}&appid=c51ef01a79ab2a387101f4ea220bc65a&units=metric`
+        const weatherurl = `https://api.openweathermap.org/data/2.5/weather?lat=${markerlocation?.latitude}&lon=${markerlocation?.longitude}&appid=${api_key}&units=metric`
 
         fetch(weatherurl).then(function (response) {
             response?.json().then(function (data) {
@@ -41,7 +43,7 @@ export default function HomePage() {
                 setcurrentlocationdata(data)
             })
         })
-        const forecasturl = `https://api.openweathermap.org/data/2.5/forecast?lat=${markerlocation?.latitude}&lon=${markerlocation?.longitude}&appid=c51ef01a79ab2a387101f4ea220bc65a&units=metric`
+        const forecasturl = `https://api.openweathermap.org/data/2.5/forecast?lat=${markerlocation?.latitude}&lon=${markerlocation?.longitude}&appid=${api_key}&units=metric`
 
         fetch(forecasturl).then(function (response) {
             response?.json().then(function (data) {
@@ -58,7 +60,7 @@ export default function HomePage() {
             if (permission?.status == "granted") {
                 getCurrentPositionAsync().then(function (response) {
 
-                    const weatherurl = `https://api.openweathermap.org/data/2.5/weather?lat=${response?.coords?.latitude}&lon=${response?.coords?.longitude}&appid=c51ef01a79ab2a387101f4ea220bc65a&units=metric`
+                    const weatherurl = `https://api.openweathermap.org/data/2.5/weather?lat=${response?.coords?.latitude}&lon=${response?.coords?.longitude}&appid=${api_key}&units=metric`
 
                     fetch(weatherurl).then(function (response) {
                         response?.json().then(function (data) {
@@ -66,7 +68,7 @@ export default function HomePage() {
                             setcurrentlocationdata(data)
                         })
                     })
-                    const forecasturl = `https://api.openweathermap.org/data/2.5/forecast?lat=${response?.coords?.latitude}&lon=${response?.coords?.longitude}&appid=c51ef01a79ab2a387101f4ea220bc65a&units=metric`
+                    const forecasturl = `https://api.openweathermap.org/data/2.5/forecast?lat=${response?.coords?.latitude}&lon=${response?.coords?.longitude}&appid=${api_key}&units=metric`
 
                     fetch(forecasturl).then(function (response) {
                         response?.json().then(function (data) {
